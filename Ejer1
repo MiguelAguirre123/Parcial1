@@ -1,0 +1,31 @@
+####################### Ejercicio 1 ####################################
+import random
+
+num_random = 0
+lista_random = []
+lista_si_no = []
+
+Num = int(input("Introduzca un Numero Entero Positivo: "))
+
+for i in range(Num):
+    num_random = random.randint(1,100)
+    lista_random.append(num_random)
+    count = 0
+
+print(f"La lista creada es: {lista_random}")
+
+for i in lista_random:
+
+    for a in range(1,i+1):
+
+        if i%a == 0:
+            count += 1
+    
+    if count%2 == 0:
+        lista_si_no.append("No")
+        count = 0
+    else:
+        lista_si_no.append("Si")
+        count = 0
+
+print(f"La lista de si es un numero inteligente es: {lista_si_no}")
